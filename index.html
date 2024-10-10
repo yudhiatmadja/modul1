@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sigmalogy Studio</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@600&display=swap" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" />
+  </head>
+  <body class="bg-[#F1F4F5] font-['Poppins']">
+    <nav class="flex flex-row max-w-6xl mx-auto justify-between py-4 items-center">
+      <!-- Icon mobile view -->
+      <div class="block lg:hidden">
+        <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+
+      <img src="src/images/logo.png" alt="" class="h-10" />
+
+      <!-- Menu items -->
+      <ul id="menu" class="hidden lg:flex flex-row space-x-8">
+        <li>
+          <a class="text-base text-indigo-950 hover:font-semibold hover:text-violet-700" href="#">Beranda</a>
+        </li>
+        <li>
+          <a class="text-base text-indigo-950 hover:font-semibold hover:text-violet-700" href="#partner">Partner</a>
+        </li>
+        <li>
+          <a class="text-base text-indigo-950 hover:font-semibold hover:text-violet-700" href="#layanan">Layanan</a>
+        </li>
+        <li>
+          <a class="text-base text-indigo-950 hover:font-semibold hover:text-violet-700" href="#proyek">Proyek Kami</a>
+        </li>
+      </ul>
+
+      <!-- Social media icons -->
+      <div class="flex space-x-4">
+        <a href="https://instagram/yudhiiatmadja" target="_blank" class="rounded-full bg-white">
+          <svg class="w-6 h-6 text-gray-800 hover:scale-125" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              fill-rule="evenodd"
+              d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/yudhiiatmadja/" target="_blank" class="rounded-full bg-white">
+          <svg class="w-6 h-6 text-gray-800 hover:scale-125" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              fill-rule="evenodd"
+              d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z"
+              clip-rule="evenodd"
+            />
+            <path d="M7.2 8.809H4V19.5h3.2V8.809Z" />
+          </svg>
+        </a>
+        <a href="https://wa.me/6285649715747" target="_blank" class="rounded-full bg-white">
+          <svg class="w-6 h-6 text-gray-800 hover:scale-125" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              fill-rule="evenodd"
+              d="M12 4a8 8 0 0 0-6.895 12.06l.569.718-.697 2.359 2.32-.648.379.243A8 8 0 1 0 12 4ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.96 9.96 0 0 1-5.016-1.347l-4.948 1.382 1.426-4.829-.006-.007-.033-.055A9.958 9.958 0 0 1 2 12Z"
+              clip-rule="evenodd"
+            />
+            <path
+              fill="currentColor"
+              d="M16.735 13.492c-.038-.018-1.497-.736-1.756-.83a1.008 1.008 0 0 0-.34-.075c-.196 0-.362.098-.49.291-.146.217-.587.732-.723.886-.018.02-.042.045-.057.045-.013 0-.239-.093-.307-.123-1.564-.68-2.751-2.313-2.914-2.589-.023-.04-.024-.057-.024-.057.005-.021.058-.074.085-.101.08-.079.166-.182.249-.283l.117-.14c.121-.14.175-.25.237-.375l.033-.066a.68.68 0 0 0-.02-.64c-.034-.069-.65-1.555-.715-1.711-.158-.377-.366-.552-.655-.552-.027 0 0 0-.112.005-.137.005-.883.104-1.213.311-.35.22-.94.924-.94 2.16 0 1.112.705 2.162 1.008 2.561l.041.06c1.161 1.695 2.608 2.951 4.074 3.537 1.412.564 2.081.63 2.461.63.16 0 .288-.013.4-.024l.072-.007c.488-.043 1.56-.599 1.804-1.276.192-.534.243-1.117.115-1.329-.088-.144-.239-.216-.43-.308Z"
+            />
+          </svg>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <ul id="mobile-menu" class="hidden lg:hidden flex-col items-center space-y-4 mt-4">
+      <li>
+        <a class="text-base text-indigo-950 hover:font-semibold hover:text-violet-700" href="#">Beranda</a>
+      </li>
+      <li>
+        <a class="text-base text-indigo-950 hover:font-semibold hover:text-violet-700" href="#partner">Partner</a>
+      </li>
+      <li>
+        <a class="text-base text-indigo-950 hover:font-semibold hover:text-violet-700" href="#layanan">Layanan</a>
+      </li>
+      <li>
+        <a class="text-base text-indigo-950 hover:font-semibold hover:text-violet-700" href="#proyek">Proyek Kami</a>
+      </li>
+    </ul>
+
+    <!-- hero section -->
+
+    <section class="hero max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="flex flex-col gap-y-10">
+          <div class="w-fit mt-14 px-3 py-2 small-badge flex flex-row bg-white rounded-full">
+            <img src="src/images/world.png" alt="" class="w-6" />
+            <p class="ms-1 text-base font-semibold text-indigo-950">We build more than 120,000 websites</p>
+          </div>
+          <div class="flex gap-y-2 flex-col">
+            <h1 class="text-indigo-950 font-['Clash_Display'] lg:text-6xl text-4xl leading-none font-bold">
+              Build Your Website <br />
+              with Sigmalogy
+            </h1>
+            <p class="text-gray-500 text-base leading-loose">
+              kami menyediakan layanan untuk membangun <br />
+              website anda dan perusahaan anda
+            </p>
+          </div>
+
+          <div class="flex flex-row gap-x-6 items-center">
+            <a href="" class="bg-violet-800 hover:bg-indigo-950 text-lg text-white py-4 px-10 rounded-full font-semibold">Build Now</a>
+            <a href="" class="flex gap-x-2">
+              <img src="src/images/demo.png" alt="" class="w-6" />
+              <p class="text-violet-700 font-bold">Pilih Domain</p>
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-row items-center">
+          <img src="src/images/hero_img.png" alt="" class="w-[550px]" />
+        </div>
+      </div>
+    </section>
+
+    <!-- partners section -->
+
+    <section class="partners max-w-6xl mx-auto py-12" id="partner">
+      <h3 class="text-indigo-950 font-['Clash_Display'] text-5xl text-center mb-10">Partner Kami</h3>
+      <div class="flex flex-col md:flex-row justify-between items-center gap-y-2">
+        <img src="src/images/adclipse.png" alt="" class="w-32" />
+        <img src="src/images/gopayy.png" alt="" class="w-32" />
+        <img src="src/images/bca.png" alt="" class="w-20" />
+        <img src="src/images/ovo.png" alt="" class="w-20" />
+        <img src="src/images/visa.png" alt="" class="w-20" />
+      </div>
+    </section>
+
+    <section class="layanan max-w-6xl mx-auto py-12" id="layanan">
+      <h3 class="text-indigo-950 font-['Clash_Display'] text-5xl mb-7 text-center">Layanan Kami</h3>
+      <div class="grid grid-rows-1 gap-y-2 md:grid-cols-4 gap-x-8">
+        <div class="cardlayanan flex flex-col gap-y-5 bg-white rounded-2xl p-5">
+          <h3 class="font-bold text-center">E-Commerce</h3>
+          <p class="text-gray-500 text-base">Pembuatan website e-commerce yang dilengkapi dengan fitur keranjang belanja, pembayaran online, pengelolaan produk, dan pelacakan pesanan.</p>
+          <a href="" class="text-base text-violet-800 mt-auto font-semibold hover:text-indigo-900">Learn More</a>
+        </div>
+        <div class="cardlayanan flex flex-col gap-y-5 bg-white rounded-2xl p-5">
+          <h3 class="font-bold text-center">Layanan SEO</h3>
+          <p class="text-gray-500 text-base">Optimasi website untuk mesin pencari agar lebih mudah ditemukan oleh pengguna, termasuk pengoptimalan kecepatan, struktur data, dan konten untuk SEO.</p>
+          <a href="" class="text-base text-violet-800 mt-auto font-semibold hover:text-indigo-900">Learn More</a>
+        </div>
+        <div class="cardlayanan flex flex-col gap-y-5 bg-white rounded-2xl p-5">
+          <h3 class="font-bold text-center">Landing Page</h3>
+          <p class="text-gray-500 text-base">Layanan pembuatan landing page kustom untuk kebutuhan kampanye pemasaran digital, promosi produk, atau layanan. Fokus pada desain yang menarik dan konversi tinggi.</p>
+          <a href="" class="text-base text-violet-800 mt-auto font-semibold hover:text-indigo-900">Learn More</a>
+        </div>
+        <div class="cardlayanan flex flex-col gap-y-5 bg-white rounded-2xl p-5">
+          <h3 class="font-bold text-center">UI/UX</h3>
+          <p class="text-gray-500 text-base">UI/UX website yang sudah ada untuk memberikan rekomendasi peningkatan pengalaman pengguna.</p>
+          <a href="" class="text-base text-violet-800 mt-auto font-semibold hover:text-indigo-900">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="project max-w-6xl mx-auto py-12" id="proyek">
+      <div class="flex flex-col gap-y-2 text-center">
+        <h1 class="text-indigo-950 font-['Clash_Display'] text-center text-5xl">Proyek Kami</h1>
+        <p class="text-base text-gray-500 text-center mt-3">Kami telah membangun website untuk beberapa perusahaan dan instansi</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 my-12">
+        <div class="rounded-2xl relative group overflow-hidden">
+          <img src="src/images/project/game.png" alt="" class="w-full h-auto" />
+          <div class="flex justify-center w-full absolute inset-x-0 bottom-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+            <a href="" class="bg-violet-700 text-white px-7 py-3 rounded-full shadow-2xl shadow-violet-700 hover:bg-violet-800 transition duration-300 ease-in-out">View Details</a>
+          </div>
+        </div>
+        <div class="flex flex-col rounded-2xl relative overflow-hidden group">
+          <img src="src/images/project/blog.png" alt="" class="w-full h-auto" />
+          <div class="flex justify-center w-full absolute inset-x-0 bottom-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+            <a href="" class="bg-violet-700 text-white px-7 py-3 rounded-full shadow-2xl shadow-violet-700 hover:bg-violet-800 transition duration-300 ease-in-out">View Details</a>
+          </div>
+        </div>
+
+        <div class="flex flex-col rounded-2xl relative overflow-hidden group">
+          <img src="src/images/project/web3.png" alt="" class="w-full h-auto" />
+          <div class="flex justify-center w-full absolute inset-x-0 bottom-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+            <a href="" class="bg-violet-700 text-white px-7 py-3 rounded-full shadow-2xl shadow-violet-700 hover:bg-violet-800 transition duration-300 ease-in-out">View Details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fitur mx-auto max-w-6xl bg-violet-700 p-8 rounded-3xl z-20 relative">
+      <div class="grid grid-cols-1 gap-y-5 md:grid-cols-2 gap-x-10">
+        <div class="flex flex-col gap-y-10">
+          <div class="w-fit mt-2 px-3 py-2 small-badge flex flex-row bg-white rounded-full">
+            <img src="src/images/world.png" alt="" class="w-6" />
+            <p class="ms-1 text-base font-semibold text-indigo-950">We build more than 120,000 websites</p>
+          </div>
+          <div class="flex gap-y-2 flex-col">
+            <h1 class="text-white font-['Clash_Display'] text-5xl leading-none font-bold">Start Build Today</h1>
+            <p class="text-white text-base leading-loose">
+              kami menyediakan layanan untuk membangun <br class="md:block hidden" />
+              website anda dan perusahaan anda
+            </p>
+          </div>
+
+          <div class="flex flex-row gap-x-6 items-center">
+            <a href="" class="bg-yellow-500 hover:bg-yellow-700 text-lg text-indigo-950 py-3 px-8 rounded-full font-semibold">Explore More</a>
+            <a href="" class="flex gap-x-2">
+              <img src="src/images/demo-white.png" alt="" class="w-6" />
+              <p class="text-white font-bold">Pilih Domain</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-x-5 gap-y-5">
+          <div class="group hover:bg-[#080c2e] cardfitur bg-white p-5 rounded-2xl flex items-center flex-col gap-y-5 transition duration-300 ease-in-out">
+            <img src="src/images/fitur/crawl.png" alt="" />
+
+            <div class="flex flex-col items-center">
+              <h3 class="font-bold text-center group-hover:text-white transition duration-300 ease-in-out">Web Crawl</h3>
+              <a href="" class="text-base font-semibold text-gray-500 group-hover:block hidden group-hover:text-white transition duration-300 ease-in-out">Learn More</a>
+            </div>
+          </div>
+          <div class="group hover:bg-[#080c2e] cardfitur bg-white p-5 rounded-2xl flex items-center flex-col gap-y-5 transition duration-300 ease-in-out">
+            <img src="src/images/fitur/report.png" alt="" />
+
+            <div class="flex flex-col items-center">
+              <h3 class="font-bold text-center group-hover:text-white transition duration-300 ease-in-out">Fast Report</h3>
+              <a href="" class="text-base font-semibold text-gray-500 group-hover:block hidden group-hover:text-white transition duration-300 ease-in-out">Learn More</a>
+            </div>
+          </div>
+          <div class="group hover:bg-[#080c2e] cardfitur bg-white p-5 rounded-2xl flex items-center flex-col gap-y-5 transition duration-300 ease-in-out">
+            <img src="src/images/fitur/ddos.png" alt="" />
+
+            <div class="flex flex-col items-center">
+              <h3 class="font-bold text-center group-hover:text-white transition duration-300 ease-in-out">Anti-DDoS</h3>
+              <a href="" class="text-base font-semibold text-gray-500 group-hover:block hidden group-hover:text-white transition duration-300 ease-in-out">Learn More</a>
+            </div>
+          </div>
+
+          <div class="group hover:bg-[#080c2e] cardfitur bg-white p-5 rounded-2xl flex items-center flex-col gap-y-5 transition duration-300 ease-in-out">
+            <img src="src/images/fitur/scale.png" alt="" class="w-10" />
+
+            <div class="flex flex-col items-center">
+              <h3 class="font-bold text-center group-hover:text-white transition duration-300 ease-in-out">Auto-Scale</h3>
+              <a href="" class="text-base font-semibold text-gray-500 group-hover:block hidden group-hover:text-white transition duration-300 ease-in-out">Learn More</a>
+            </div>
+          </div>
+          <div class="group hover:bg-[#080c2e] cardfitur bg-white p-5 rounded-2xl flex items-center flex-col gap-y-5 transition duration-300 ease-in-out">
+            <img src="src/images/fitur/ai.png" alt="" />
+
+            <div class="flex flex-col items-center">
+              <h3 class="font-bold text-center group-hover:text-white transition duration-300 ease-in-out">AI Perform</h3>
+              <a href="" class="text-base font-semibold text-gray-500 group-hover:block hidden group-hover:text-white transition duration-300 ease-in-out">Learn More</a>
+            </div>
+          </div>
+          <div class="group hover:bg-[#080c2e] cardfitur bg-white p-5 rounded-2xl flex items-center flex-col gap-y-5 transition duration-300 ease-in-out">
+            <img src="src/images/fitur/plugin.png" alt="" />
+
+            <div class="flex flex-col items-center">
+              <h3 class="font-bold text-center group-hover:text-white transition duration-300 ease-in-out">Top Plugins+</h3>
+              <a href="" class="text-base font-semibold text-gray-500 group-hover:block hidden group-hover:text-white transition duration-300 ease-in-out">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer w-screen -mt-[200px] bg-[#070C29] -z-10">
+      <div class="max-w-6xl mx-auto py-10 flex flex-col justify-center items-center gap-y-5 pt-[300px]">
+        <img src="src/images/logo_footer.png" alt="" class="w-56" />
+        <p class="text-white text-center">Developed by Yudhi Developer</p>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="src/js/script.js"></script>
+  </body>
+</html>
