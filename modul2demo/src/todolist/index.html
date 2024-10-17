@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="../style/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-950">
+    <div class="container mx-auto mt-10 p-5 bg-gray-900 rounded-lg shadow-lg max-w-fit sm:w-3/4 md:w-2/3 lg:w-1/2">
+      <h1 id="judul" class="text-4xl font-bold text-center text-white mb-5">To-Do List</h1>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-2 mb-5">
+        <input id="taskInput" type="text" placeholder="Add a new task..." class="p-3 border border-gray-300 rounded-lg w-full sm:w-2/3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+        <input id="taskDeadline" type="date" class="p-3 border border-gray-300 rounded-lg w-fit sm:w-1/3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <button id="addTask" class="bg-blue-500 text-white p-3 rounded-full hover:bg-blue-600">
+          <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5" />
+          </svg>
+        </button>
+      </div>
+
+      <ul id="taskList" class="divide-y divide-white w-full mx-auto"></ul>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+  </body>
+</html>

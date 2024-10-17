@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/13.2.0/math.js"
+      integrity="sha512-K6yeEH8HDerhMdJyfx5uSdY0YHQAu2R0KhwGQ9Jzvh0qZPUjceeV7ch0BZz9w6UY+TgKldDzsQWVN+XeJ3PSzw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="../style/style.css" />
+  </head>
+  <body class="bg-sky-400 flex justify-center items-center p-4 min-h-screen">
+    <div class="flex flex-col w-96 gap-y-6 bg-orange-600 shadow-lg py-6 px-4 rounded-lg">
+      <input type="text" id="display" readonly class="px-3 py-2 text-lg focus:outline-none rounded-lg" />
+      <div class="grid grid-cols-4 gap-4">
+        <button type="button" id="clear" class="rounded-full bg-blue-300 py-2 shadow-lg hover:shadow-inner">C</button>
+        <button type="button" id="backspace" class="rounded-full bg-blue-300 py-2 shadow-lg hover:shadow-inner">B</button>
+        <button type="button" value="%" class="calcuBTN rounded-full bg-blue-300 py-2 shadow-lg hover:shadow-inner">%</button>
+        <button type="button" value="/" class="calcuBTN rounded-full bg-blue-300 py-2 shadow-lg hover:shadow-inner">/</button>
+        <button type="button" value="7" class="calcuBTN rounded-full bg-orange-200 py-2 shadow-lg hover:shadow-inner">7</button>
+        <button type="button" value="8" class="calcuBTN rounded-full bg-orange-200 py-2 shadow-lg hover:shadow-inner">8</button>
+        <button type="button" value="9" class="calcuBTN rounded-full bg-orange-200 py-2 shadow-lg hover:shadow-inner">9</button>
+        <button type="button" value="*" class="calcuBTN rounded-full bg-blue-300 py-2 shadow-lg hover:shadow-inner">*</button>
+        <button type="button" value="4" class="calcuBTN rounded-full bg-orange-200 py-2 shadow-lg hover:shadow-inner">4</button>
+        <button type="button" value="5" class="calcuBTN rounded-full bg-orange-200 py-2 shadow-lg hover:shadow-inner">5</button>
+        <button type="button" value="6" class="calcuBTN rounded-full bg-orange-200 py-2 shadow-lg hover:shadow-inner">6</button>
+        <button type="button" value="-" class="calcuBTN rounded-full bg-blue-300 py-2 shadow-lg hover:shadow-inner">-</button>
+        <button type="button" value="1" class="calcuBTN rounded-full bg-orange-200 py-2 shadow-lg hover:shadow-inner">1</button>
+        <button type="button" value="2" class="calcuBTN rounded-full bg-orange-200 py-2 shadow-lg hover:shadow-inner">2</button>
+        <button type="button" value="3" class="calcuBTN rounded-full bg-orange-200 py-2 shadow-lg hover:shadow-inner">3</button>
+        <button type="button" value="+" class="calcuBTN rounded-full bg-blue-300 py-2 shadow-lg hover:shadow-inner">+</button>
+        <button type="button" value="0" class="calcuBTN rounded-full bg-orange-200 py-2 shadow-lg hover:shadow-inner">0</button>
+        <button type="button" value="," class="calcuBTN rounded-full bg-orange-200 py-2 shadow-lg hover:shadow-inner">,</button>
+        <button type="button" id="equal" class="calcuBTN rounded-full bg-blue-300 py-2 shadow-lg hover:shadow-inner col-span-2">=</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
